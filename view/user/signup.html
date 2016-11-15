@@ -1,0 +1,29 @@
+<div class="col-lg-6 col-offset-2 ">
+  <div class="row ">
+    <h1>Sign Up</h1>
+
+      <form name="form" >
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" ng-model="user.name" placeholder="name" class="form-control" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" ng-model="user.email" placeholder="email@example.com" class="form-control" required>
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" ng-model="user.password" placeholder="******" class="form-control" required ng-minlength="6" >
+        </div>
+        <div class="form-group">
+          <label for="password_confirmation">Password Confirmation</label>
+          <input type="password" id="password_confirmation" ng-model="user.password_confirmation" placeholder="******" class="form-control" required ng-minlength="6">
+        </div>
+        <input type="submit" name="submit" ng-click="signup()" class="btn btn-success" ng-disabled="form.$invalid">
+
+        <div class="alert alert-danger" ng-if="user.error">
+              <strong>There was an error: </strong> {{user.error}}
+        </div>
+      </form>
+    </div>
+</div>

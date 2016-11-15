@@ -1,0 +1,23 @@
+
+<div class="row ">
+  <h1>New Bookmarker</h1>
+  <div  class="col-sm-4" >
+    <form name="form">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" ng-model="bookmark.name" placeholder="name" class="form-control" required="">
+      </div>
+      <div class="form-group">
+        <label for="uri">URL</label>
+        <input type="text" id="uri" ng-model="bookmark.uri" placeholder="http://example.com" class="form-control" required>
+      </div>
+      <input type="submit" name="submit" ng-click="addBookmark()" class="btn btn-success" ng-disabled="form.$invalid">
+      <div class="alert alert-danger" ng-if="bookmark.error">
+            <strong>There was an error: </strong> {{bookmark.error}}
+      </div>
+      <div class="alert alert-success" ng-if="success" >
+            <strong>Saved </strong>
+      </div>
+    </form>
+  </div>
+</div>
