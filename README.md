@@ -1,1 +1,1 @@
-# Frontend for [bookmark_backend](https://github.com/djaircarvalho/bookmark_backend)
+# Frontend for [boockmark](https://github.com/djaircarvalho/bookmark)
